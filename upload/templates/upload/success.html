@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCSHARING - Upload Successful</title> <!-- Updated title -->
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for dark mode -->
+    <style>
+        body {
+            background-color: #202124;
+            color: #ffffff; /* Text color */
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ffffff; /* Header text color */
+            margin-bottom: 20px;
+        }
+        p {
+            color: #cccccc; /* Paragraph text color */
+        }
+        button {
+            background-color: #007bff; /* Bootstrap primary button color */
+            border-color: #007bff; /* Bootstrap primary button border color */
+            color: #ffffff; /* Button text color */
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Bootstrap primary button hover color */
+            border-color: #0056b3; /* Bootstrap primary button hover border color */
+        }
+        input[type="text"] {
+            background-color: #333; /* Input background color */
+            color: #ffffff; /* Input text color */
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ARCSHARING - File Uploaded Successfully!</h1> <!-- Updated header -->
+        <p>Your file has been uploaded.</p>
+        <a href="{{ download_url }}" class="btn btn-primary mt-3">Download File</a>
+        <p class="mt-4 mb-0">Shareable Link:</p>
+        <input type="text" value="{{ download_url }}" readonly onclick="this.select();">
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
